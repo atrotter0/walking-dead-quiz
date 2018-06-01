@@ -59,8 +59,8 @@ $(document).ready(function() {
     var answer1 = parseInt($("input:radio[name=question1]:checked").val());
     var answer2 = parseInt($("input:radio[name=question2]:checked").val());
     var answer3 = parseInt($("input:radio[name=question3]:checked").val());
-    var result = answer1 + answer2 + answer3;
-    runCharacterMatch(result);
+    var totalScore = answer1 + answer2 + answer3;
+    runCharacterMatch(totalScore);
   });
 
   $("#try-again").click(function() {
