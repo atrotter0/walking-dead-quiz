@@ -1,5 +1,12 @@
-.panel-title h1, .panel-title h2, .results h2 {
+.panel-title h1, .panel-title h2, .results h1, .results h2 {
+  font-family: 'Alfa Slab One', cursive;f
+  font-weight: 800;
   text-align: center;
+}
+
+form h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+  text-shadow: 2px 2px 10px #893232;
 }
 
 .results, .result-box {
@@ -14,6 +21,12 @@
   width: 75%;
 }
 
+.results h1 {
+  font-weight: bold;
+  text-shadow: 2px 2px 10px #893232;
+  letter-spacing: 4px;
+}
+
 .results h2 {
   margin-bottom: 40px;
 }
@@ -23,11 +36,8 @@ figcaption {
   text-align: center;
 }
 
-.character-name {
-  font-weight: bold;
-}
-
 .try-again-box {
+  margin-top: 50px;
   text-align: center;
 }
 
