@@ -1,5 +1,10 @@
 const RADIOS_CHECKED = 3;
 
+function resetQuiz() {
+  $(".results").hide();
+  disableSubmit();
+}
+
 function disableSubmit() {
   $("#submit").prop("disabled", "true");
 }
@@ -21,6 +26,7 @@ function enableSubmit() {
 }
 
 function runCharacterMatch(value) {
+  $(".results").show();
   $("#quiz").hide();
   if (value <= 4) {
     $("#glenn").show();
@@ -34,7 +40,7 @@ function runCharacterMatch(value) {
 }
 
 $(document).ready(function() {
-  disableSubmit();
+  resetQuiz();
 
   $("label").click(function() {
     validateInput();

@@ -2,10 +2,23 @@
   text-align: center;
 }
 
-.result-box {
+.results, .result-box {
   display: none;
 }
 
 .result-box img {
+  border-radius: 2px;
+  box-shadow: 2px 2px 10px;
+  display: block;
+  margin: 0 auto;
   width: 75%;
+}
+
+figcaption {
+  padding: 5px;
+  text-align: center;
+}
+
+.try-again-box {
+  text-align: center;
 }

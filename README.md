@@ -6,7 +6,7 @@
 
 ## Description
 
-Take a personality quiz to find out what Waking Dead character you are!
+Take a personality quiz to find out which Waking Dead character you are!
 
 ## Setup/Contribution Requirements
 
