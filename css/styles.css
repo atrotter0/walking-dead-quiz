@@ -1,4 +1,4 @@
-.panel-title h1, .panel-title h2 {
+.panel-title h1, .panel-title h2, .results h2 {
   text-align: center;
 }
 
@@ -14,11 +14,23 @@
   width: 75%;
 }
 
+.results h2 {
+  margin-bottom: 40px;
+}
+
 figcaption {
   padding: 5px;
   text-align: center;
 }
 
+.character-name {
+  font-weight: bold;
+}
+
 .try-again-box {
   text-align: center;
+}
+
+.btn:focus {
+  outline: none;
 }

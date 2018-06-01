@@ -10,13 +10,13 @@ function disableSubmit() {
 }
 
 function validateInput() {
-  if (countRadioBoxes() === RADIOS_CHECKED) enableSubmit();
+  countRadioBoxes() === RADIOS_CHECKED && enableSubmit();
 }
 
 function countRadioBoxes() {
   var count = 0;
   $("input:radio").each(function(index, item) {
-    if ($(item).is(':checked')) count++;
+    $(item).is(':checked') && count++;
   });
   return count;
 }
@@ -29,13 +29,13 @@ function runCharacterMatch(value) {
   $(".results").show();
   $("#quiz").hide();
   if (value <= 4) {
-    $("#glenn").show();
+    $("#glenn").fadeToggle();
   } else if (value <= 6 && value >= 5) {
-    $("#carl").show();
+    $("#carl").fadeToggle();
   } else if (value >= 7) {
-    $("#gov").show();
+    $("#gov").fadeToggle();
   } else {
-    alert("You broke it");
+    alert("You broke it...");
   }
 }
 
