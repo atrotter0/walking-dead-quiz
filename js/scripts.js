@@ -1,39 +1,28 @@
+const RADIOS_CHECKED = 3;
+
 function disableSubmit() {
   $("#submit").prop("disabled", "true");
 }
 
 function validateInput() {
-  var count = countRadioBoxes();
-  if (allChecked(count)) {
-    enableSubmit();
-  }
+  if (countRadioBoxes() === RADIOS_CHECKED) enableSubmit();
 }
 
 function countRadioBoxes() {
   var count = 0;
   $("input:radio").each(function(index, item) {
-    if ($(item).is(':checked')) {
-      count++;
-    }
+    if ($(item).is(':checked')) count++;
   });
   return count;
-}
-
-function allChecked(count) {
-  if (count === 3) {
-    return true;
-  } else {
-    return false;
-  }
 }
 
 function enableSubmit() {
   $("#submit").removeAttr("disabled");
 }
 
-function characterMatch(value) {
+function runCharacterMatch(value) {
   $("#quiz").hide();
-  if (value <= 4){
+  if (value <= 4) {
     $("#glenn").show();
   } else if (value <= 6 && value >= 5) {
     $("#carl").show();
@@ -57,7 +46,7 @@ $(document).ready(function() {
     var answer1 = parseInt($("input:radio[name=question1]:checked").val());
     var answer2 = parseInt($("input:radio[name=question2]:checked").val());
     var answer3 = parseInt($("input:radio[name=question3]:checked").val());
-    var result = answer3 + answer2 + answer1;
-    characterMatch(result);
+    var result = answer1 + answer2 + answer3;
+    runCharacterMatch(result);
   });
 });
